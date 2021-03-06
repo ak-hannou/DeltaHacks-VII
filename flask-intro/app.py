@@ -44,9 +44,9 @@ def home():
     #return render_template('index.html', posts=posts)
     return render_template('index.html')
 
-@app.route('/welcome')
-def welcome():
-    return render_template("welcome.html")
+@app.route('/patient')
+def patient():
+    return render_template("patient.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
