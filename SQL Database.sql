@@ -50,3 +50,6 @@ INSERT INTO prescription VALUES('Tylenol 3', 2);
 #Sample Query
 SELECT clinic.clinic_name, physician.physician_name, patient.patient_name FROM clinic, physician, patient 
 WHERE patient.physician_id = physician.physician_id AND physician.clinic_id = clinic.clinic_id;
+
+
+SELECT @@SERVERNAME

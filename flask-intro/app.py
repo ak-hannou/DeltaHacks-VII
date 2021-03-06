@@ -7,11 +7,20 @@ from flask import flash
 from flask import g
 from functools import wraps
 import sqlite3
+import mysql.connector
+
+mydb = mysql.connector.connect(host='localhost',user='root',password='yunfei01',database='deltahacksvii')
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM clinic")
+
+myresult = mycursor.fetchall()
+
 
 app = Flask(__name__)
 
 app.secret_key = 'my precious'
-app.database = "sample.db"
+app.database = "deltahacksVII.db"
 
 
 def login_required(f):
@@ -28,11 +37,12 @@ def login_required(f):
 #@login_required
 def home():
     #return "Hello World"
-    g.db = connect_db()
-    cur = g.db.execute('select * from posts')
-    posts  = [dict(title=row[0], description=row[1]) for row in cur.fetchall()]
-    g.db.close()
-    return render_template('index.html', posts=posts)
+    #g.db = connect_db()
+    #cur = g.db.execute('select * from patient')
+    posts  = [dict(title=row[0], description=row[1]) for row in myresult]
+    #g.db.close()
+    #return render_template('index.html', posts=posts)
+    return render_template('index.html')
 
 @app.route('/welcome')
 def welcome():
