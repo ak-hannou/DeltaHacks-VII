@@ -107,7 +107,7 @@ p {
 }
 
 /* features section */
-#features {
+#update {
   padding: 7% 15%;
   position: relative;
 }
@@ -124,13 +124,13 @@ p {
 
 /* images for features */
 .feature-image {
-  color: #ffd5cd;
+  color: #A3CEF1;
   width: 100%;
   padding: 10%;
 }
 
 .feature-image:hover {
-  color: #efbbcf;
+  color: #274C77;
 }
 
 /* testimonial section */
@@ -195,4 +195,10 @@ p {
 
 .icon-footer{
   padding: 0 1% 1% 0;
+}
+
+/* form css */
+#form_date{
+
+  border-bottom: 2.5%
 }
