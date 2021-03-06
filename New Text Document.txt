@@ -1,0 +1,1 @@
+P = VIcos(wt + theta)
