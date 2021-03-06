@@ -16,7 +16,7 @@ const reset = function(ev){
 }
 
 const send = function(ev){
-    ev.preventDefault();
+    ev.preventDefault(); //we are overwritting the default
     ev.stopPropagation();
     //or the click will travel to the form and the form will submit
     let fails = validate();
