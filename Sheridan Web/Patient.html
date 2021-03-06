@@ -60,7 +60,8 @@
       <div class="row" style="width: 100%;">
         <div class="col-lg-6">
           <h1 class="big-heading">Start updating your information now.</h1>
-          <a class="btn btn-dark btn-lg download-btn" href="#features" role="button"><i class="fas fa-user-friends"></i> Patient Update</a>
+          <a class="btn btn-dark btn-lg download-btn" href="#update" role="button"><i class="fas fa-user-friends"></i> Update</a>
+          <a class="btn btn-dark btn-lg download-btn" href="Patient.html" role="button"><i class="fas fa-hospital-user"></i> History</a>
         </div>
         <div class="col-lg-6" style="padding-left: 20px;">
           <img class="title-image" src="images/flower.png" alt="trillium">
@@ -73,14 +74,18 @@
 
   <!-- Form -->
 
-  <section class="white-section" id="features">
+  <section class="white-section" id="update">
 
     <div class="container-fluid">
-      <form>
-        <div class="form-group">
+
+      <!-- email address -->
+      <form id="form-user" action="#" method="post">
+        <div class="form-group" data-errormsg="">
           <label for="exampleFormControlInput1">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
         </div>
+
+        <!-- Category -->
         <div class="form-group">
           <label for="exampleFormControlSelect1">Categories</label>
           <select class="form-control" id="exampleFormControlSelect1">
@@ -91,19 +96,28 @@
             <option>Miscellaneous</option>
           </select>
         </div>
-        <div class="form-group">
+
+        <!-- Update textarea -->
+        <div class="form-group" data-errormsg="">
           <label for="exampleFormControlTextarea1">Your Update</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
+
+        <!-- Checking to see if the person agrees to submitting correct info -->
+        <div class="form-box" data-errormsg="">
+          <label for="input-alive">I confirm this information is true</label>
+          <input type="checkbox" id="input-alive" value="yes" tabindex="5" />
+        </div>
+
         <div class="form-box">
           <button class="btn btn-dark" id="button-cancel">Cancel</button>
-          <button class="btn btn-outline-primary" id="button-send">Send</button>
+          <button class="btn btn-outline-primary" id="button-send">Submit</button>
         </div>
 
       </form>
 
-      <script src"./patient.js"></script>
     </div>
+
 
   </section>
 
