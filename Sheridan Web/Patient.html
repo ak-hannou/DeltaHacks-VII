@@ -76,13 +76,22 @@
 
   <section class="white-section" id="update">
 
-    <div class="container-fluid">
+    <div class="container-fluid coloured-section">
 
-      <!-- email address -->
+      <!-- date -->
       <form id="form-user" action="#" method="post">
-        <div class="form-group" data-errormsg="">
-          <label for="exampleFormControlInput1">Email address</label>
-          <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
+        <div>
+           <label for="date">Date</label>
+        </div>
+        <div>
+          <input type="date" name="date"  id="exampleFormControlInput1" min="2020-06-10" style="margin-bottom: 2%">
+        </div>
+
+
+        <!-- Name input -->
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Health Card Number</label>
+          <input class="form-control" id="exampleFormControlInput1" placeholder="5584-486-674">
         </div>
 
         <!-- Category -->
@@ -100,7 +109,7 @@
         <!-- Update textarea -->
         <div class="form-group" data-errormsg="">
           <label for="exampleFormControlTextarea1">Your Update</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Today, I walked my dog..." rows="3"></textarea>
         </div>
 
         <!-- Checking to see if the person agrees to submitting correct info -->
