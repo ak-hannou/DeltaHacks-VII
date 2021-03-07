@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Patient2Doctor</title>
+    <link rel="icon" href="favicon.ico">
+    <!-- loading in bootstrap and my css stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- linking fonts - ubuntu and monteserrat -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/127e963e47.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+<section class="coloured-section" id="title">
+
+    <div class="container-fluid">
+
+        <!-- Nav Bar -->
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <a class="navbar-brand" href = ""><b>Patient2Doctor</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">FAQ</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cta">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!-- Title -->
+        <div class="row" style="width: 100%;">
+            <div class="col-lg-6">
+                <h1 class="big-heading">Sharing information between patients and doctors has never been easier.</h1>
+                <a class="btn btn-dark btn-lg download-btn" href="/patient" role="button"><i class="fas fa-user-friends"></i> Patient</a>
+                <a class="btn btn-dark btn-lg download-btn" href="/login" role="button"><i class="fas fa-hospital-user"></i> Doctor</a>
+            </div>
+            <div class="col-lg-6" style="padding-left: 20px;">
+                <img class="title-image" src="static/images/flower.png" alt="trillium">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Features -->
+
+<section class="white-section" id="features">
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-lg-4 feature-desc">
+                <i class="fas fa-check-circle feature-image fa-5x"></i>
+                <h3 class="feature-header">Easy to use.</h3>
+                <p>With a simple click, patients can update or browse their medical history</p>
+            </div>
+
+            <div class="col-lg-4 feature-desc">
+                <i class="fas fa-hospital feature-image fa-5x"></i>
+                <h3 class="feature-header">Streamline communication.</h3>
+                <p>This design allows patients to update their own medical files on a day to day basis.</p>
+            </div>
+
+            <div class="col-lg-4 feature-desc">
+                <i class="fas fa-heart feature-image fa-5x"></i>
+                <h3 class="feature-header">Guaranteed Safety.</h3>
+                <p>We promise to keep your information safe. </p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Testimonials -->
+
+<section class="coloured-section" id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" style="padding-top: 20px">
+            <div class="carousel-item active">
+                <h2 class="testimonial-text">A great way to stay updated with all of my patients.</h2>
+                <img class="testimonial-image" src="static/images/Dr.Hunt.png" alt="Dr. Owen Hunt">
+                <em>Dr. Owen Hunt, Surgeon, Seattle</em>
+            </div>
+            <div class="carousel-item">
+                <h2 class="testimonial-text">Super easy to use, now I never forget to mention anything to my Doctors.</h2>
+                <img class="testimonial-image" src="static/images/sheridan_3.png" alt="lady-profile" style="background-color: white;">
+                <em>Sheridan, University Student, Toronto</em>
+            </div>
+            <div class="carousel-item">
+                <h2 class="testimonial-text"> An amazing application, Patient2Doctor helps to streamline communication between myself and my patients. </h2>
+                <img class="testimonial-image" src="static/images/Dr.MeredithGrey.png" alt="lady-profile">
+                <em>Dr. Meredith Grey, General Surgeon, Seattle</em>
+            </div>
+        </div>
+
+        <!-- buttons -->
+        <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+
+
+</section>
+
+
+<!-- Press -->
+
+<section class="coloured-section" id="press">
+    <img class="press-logo" src="static/images/TechCrunch.png" alt="tc-logo">
+    <img class="press-logo" src="static/images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="static/images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press-logo" src="static/images/mashable.png" alt="mashable-logo">
+
+</section>
+
+
+
+<!-- Call to Action -->
+
+<section class="white-section" id="cta">
+
+    <div class=container-fluid>
+
+        <h3 class="cta-heading">Check if your doctor uses Patient2Doctor today.</h3>
+        <button class="btn btn-outline-primary btn-lg download-btn button-cta"><i class="fas fa-hospital-user"></i> Find Your Doctor</button>
+
+    </div>
+</section>
+
+<!-- Footer -->
+
+<footer class="coloured-section" style="padding-top: 20px">
+
+    <i class="fab fa-twitter icon-footer"></i>
+    <i class="fab fa-facebook-f icon-footer"></i>
+    <i class="fab fa-instagram icon-footer"></i>
+    <i class="fas fa-envelope icon-footer"></i>
+
+    <p>© Copyright 2020 Prism Find</p>
+</footer>
+
+
+</body>
+
+</html>
