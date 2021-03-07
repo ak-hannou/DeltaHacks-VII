@@ -76,7 +76,7 @@
   <section class="white-section" id="update">
 
     <div class="container-fluid coloured-section">
-    <h2 class="section-heading">Update File</h2>
+      <h2 class="section-heading">Update File</h2>
       <!-- date -->
       <form id="form-user" action="#" method="post">
         <div>
@@ -90,13 +90,13 @@
         <!-- Name input -->
         <div class="form-group" data-errormsg="">
           <label for="exampleFormControlTextarea1">Health Card Number</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="5584-486-674-XX" rows="1"></textarea>
+          <textarea type="text" name="health_num" class="form-control" id="exampleFormControlTextarea1" placeholder="5584-486-674-XX" rows="1"></textarea>
         </div>
 
         <!-- Category -->
         <div class="form-group">
           <label for="exampleFormControlSelect1">Categories</label>
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select name="category" class="form-control" id="exampleFormControlSelect1">
             <option>Family_History</option>
             <option>Injuries_and_Symptoms_Log</option>
             <option>Prescriptions</option>
@@ -108,7 +108,7 @@
         <!-- Update textarea -->
         <div class="form-group" data-errormsg="">
           <label for="exampleFormControlTextarea1">Your Update</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Today, I walked my dog..." rows="3"></textarea>
+          <textarea name="notes" type="text" class="form-control" id="exampleFormControlTextarea1" placeholder="Today, I walked my dog..." rows="3"></textarea>
         </div>
 
         <!-- Checking to see if the person agrees to submitting correct info -->
@@ -119,7 +119,24 @@
 
         <div class="form-box">
           <button class="btn btn-dark" id="button-cancel">Cancel</button>
-          <button class="btn btn-outline-primary" id="button-send" href="Medical-History_Page.html">Submit</button>
+
+          <!-- Pop-up button for confirmation -->
+          <script type='text/javascript'>
+            function foo() {
+              var user_choice = window.confirm('Do you want to add this information to your file?');
+              if (user_choice == true) {
+                window.location = 'Patient.html'; // you can also use element.submit() if your input type='submit'
+              } else {
+                return false;
+              }
+            }
+          </script>
+
+
+          <input type="button" class="btn btn-outline-primary" id="button-send" onClick="foo()" value="Submit" href="testing.html">
+
+
+
         </div>
 
       </form>
@@ -135,51 +152,51 @@
   <!-- Medical History -->
   <section class="coloured-section" id="medical-history">
     <div class="container-fluid coloured-section">
-    <h2 class="section-heading">Medical History</h2>
+      <h2 class="section-heading">Medical History</h2>
 
-    <form id="form-user" action="#" method="post">
+      <form id="form-user" action="#" method="post">
 
-      <!-- Name input -->
-      <div class="form-group" data-errormsg="">
-        <label for="exampleFormControlTextarea1">Health Card Number</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="5584-486-674-XX" rows="1"></textarea>
-      </div>
+        <!-- Name input -->
+        <div class="form-group" data-errormsg="">
+          <label for="exampleFormControlTextarea1">Health Card Number</label>
+          <textarea type="text" name="health_num2"class="form-control" id="exampleFormControlTextarea1" placeholder="5584-486-674-XX" rows="1"></textarea>
+        </div>
 
-      <!-- Category -->
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Categories</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>Family_History</option>
-          <option>Injuries_and_Symptoms_Log</option>
-          <option>Prescriptions</option>
-          <option>Mental_Health_Log</option>
-          <option>Miscellaneous_Notes</option>
-        </select>
-      </div>
+        <!-- Category -->
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Categories</label>
+          <select name="category2" class="form-control" id="exampleFormControlSelect1">
+            <option>Family_History</option>
+            <option>Injuries_and_Symptoms_Log</option>
+            <option>Prescriptions</option>
+            <option>Mental_Health_Log</option>
+            <option>Miscellaneous_Notes</option>
+          </select>
+        </div>
 
-      <!-- Update textarea -->
-      <div>
-        <label for="date">Date</label>
-      </div>
-      <div>
-        <input type="date" name="date" id="exampleFormControlInput1" min="2020-06-10" style="margin-bottom: 2%">
-      </div>
+        <!-- Update textarea -->
+        <div>
+          <label for="date">Date</label>
+        </div>
+        <div>
+          <input type="date" name="date2" id="exampleFormControlInput1" min="2020-06-10" style="margin-bottom: 2%">
+        </div>
 
-      <!-- Checking to see if the person agrees to submitting correct info -->
-      <div class="form-box" data-errormsg="">
-        <label for="input-alive">I am a human</label>
-        <input type="checkbox" id="input-alive" value="yes" tabindex="5" />
-      </div>
+        <!-- Checking to see if the person agrees to submitting correct info -->
+        <div class="form-box" data-errormsg="">
+          <label for="input-alive">I am a human</label>
+          <input type="checkbox" id="input-alive" value="yes" tabindex="5" />
+        </div>
 
-      <div class="form-box">
-        <button class="btn btn-dark" id="button-cancel">Cancel</button>
-        <button class="btn btn-outline-primary" id="button-send">Get Information</button>
-      </div>
+        <div class="form-box">
+          <button class="btn btn-dark" id="button-cancel">Cancel</button>
+          <button class="btn btn-outline-primary" id="button-send">Get Information</button>
+        </div>
 
-    </form>
+      </form>
 
 
-  </div>
+    </div>
 
   </section>
 
