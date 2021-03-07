@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Patient Form</title>
+  <link rel="icon" href="favicon.ico">
+  <!-- loading in bootstrap and my css stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <!-- linking fonts - ubuntu and monteserrat -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- font-awesome -->
+  <script src="https://kit.fontawesome.com/127e963e47.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+  <section class="coloured-section" id="title">
+
+    <div class="container-fluid-header">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-light" style="padding-bottom: 0px">
+
+        <a class="navbar-brand" href="Welcome.html"><b>Patient2Doctor</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">FAQ</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#cta">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Title -->
+      <div class="row" style="width: 100%; padding:20px 0px 115px;">
+        <div class="col-lg-6">
+          <h1 class="big-heading">Updating patient information has never been easier.</h1>
+          <a class="btn btn-dark btn-lg download-btn" href="#update" role="button"><i class="fas fa-user-friends"></i> Update</a>
+          <a class="btn btn-dark btn-lg download-btn" href="Doctor-History.html" role="button"><i class="fas fa-hospital-user"></i> Retrieve History</a>
+        </div>
+        <div class="col-lg-6" style="padding-left: 20px;">
+          <img class="title-image" src="images/flower.png" alt="trillium">
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Form -->
+
+  <section class="white-section" id="update">
+
+    <div class="container-fluid coloured-section">
+      <h2 class="section-heading">Update Patient File</h2>
+      <!-- date -->
+      <form id="form-user" action="#" method="post">
+
+        <!-- Name input -->
+        <div class="form-group" data-errormsg="">
+          <label for="exampleFormControlTextarea1">Patient Health Card Number</label>
+          <textarea type="text" name="health_num" class="form-control" id="exampleFormControlTextarea1" placeholder="5584-486-674-XX" rows="1"></textarea>
+        </div>
+
+        <!-- Category -->
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Categories</label>
+          <select name="category" class="form-control" id="exampleFormControlSelect1">
+            <option>Family_History</option>
+            <option>Injuries_and_Symptoms_Log</option>
+            <option>Prescriptions</option>
+            <option>Mental_Health_Log</option>
+            <option>Miscellaneous_Notes</option>
+          </select>
+        </div>
+
+        <!-- Update textarea -->
+        <div class="form-group" data-errormsg="">
+          <label for="exampleFormControlTextarea1">Patient Update</label>
+          <textarea name="notes" type="text" class="form-control" id="exampleFormControlTextarea1" placeholder="The patient reported ..." rows="3"></textarea>
+        </div>
+
+        <!-- Checking to see if the person agrees to submitting correct info -->
+        <div class="form-box" data-errormsg="">
+          <label for="input-alive">I confirm this information is true</label>
+          <input type="checkbox" id="input-alive" value="yes" tabindex="5" />
+        </div>
+
+        <div class="form-box">
+          <button class="btn btn-dark" id="button-cancel">Cancel</button>
+
+          <!-- Pop-up button for confirmation -->
+          <!-- <script type='text/javascript'>
+            function foo() {
+              var user_choice = window.confirm('Do you want to add this information to your file?');
+              if (user_choice == true) {
+                window.location = 'Patient.html'; // you can also use element.submit() if your input type='submit'
+              } else {
+                return false;
+              }
+            }
+          </script> -->
+
+
+          <button class="btn btn-outline-primary" id="button-send" href="success.html">Submit</button> <!--ben should linke to success page for adding info -->
+
+
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- Retrieving Medical History -->
+  <section class="coloured-section" id="medical-history">
+    <div class="container-fluid coloured-section">
+      <h2 class="section-heading">Retrieve Patient Medical History</h2>
+
+      <form id="form-user" action="#" method="post">
+
+        <!-- Name input -->
+        <div class="form-group" data-errormsg="">
+          <label for="exampleFormControlTextarea1">Patient Health Card Number</label>
+          <textarea type="text" name="health_num2" class="form-control" id="exampleFormControlTextarea1" placeholder="5584-486-674-XX" rows="1"></textarea>
+        </div>
+
+        <!-- Update textarea -->
+        <div>
+          <label for="date">Date</label>
+        </div>
+        <div>
+          <input type="date" name="date2" id="exampleFormControlInput1" min="1920-06-10" style="margin-bottom: 2%">
+        </div>
+
+        <!-- Checking to see if the person agrees to submitting correct info -->
+        <div class="form-box" data-errormsg="">
+          <label for="input-alive">I am a human</label>
+          <input type="checkbox" id="input-alive" value="yes" tabindex="5" />
+        </div>
+
+        <div class="form-box">
+          <button class="btn btn-dark" id="button-cancel">Cancel</button>
+          <button class="btn btn-outline-primary" id="button-send">Get Information</button>
+        </div>
+
+      </form>
+
+
+    </div>
+
+  </section>
+
+  <!-- Title to go on top later -->
+  <section>
+    <div class="container-fluid white-section" style="text-align: left; padding-top:2%">
+      <!-- Title -->
+      <div class="row" style="width: 100%;">
+        <div class="col-lg-12">
+          <h1 class="big-heading">Category Name: Prescriptions.</h1> <!-- Ben enter in category title ie. prescriptions -->
+
+          <p>Acetaminophen</p> <!-- Ben enter in category title ie. prescriptions -->
+          <p>Ibuprofen</p>
+          <p>Metoprolol</p>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="coloured-section" id="footer">
+
+    <i class="fab fa-twitter icon-footer"></i>
+    <i class="fab fa-facebook-f icon-footer"></i>
+    <i class="fab fa-instagram icon-footer"></i>
+    <i class="fas fa-envelope icon-footer"></i>
+
+    <p>© Copyright 2020 Patient2Doctor</p>
+  </footer>
+
+
+</body>
+
+</html>
